@@ -13,19 +13,19 @@
 </head>
 <body>
     <header>
-
+        <h1>ToDoList</h1>
     </header>
     <main>
         <div id="app">
-            <ul>
-                <li v-for="item in items">
-                    {{items}}
-                </li>
-            </ul>
             <input id="input" type="text" v-model="newToDo">
             <button v-on:click="addToDo">
                 Add to ToDoList
             </button>
+            <ul>
+                <li v-for="item in items">
+                    {{item}}
+                </li>
+            </ul>
         </div>
     </main>
     <footer>

@@ -8,15 +8,15 @@ console.log('Hello Vue!');
 
 const app = new Vue ({
     el: '#app',
-    data:{
+    data: {
         items:[
             'mela',
             'pera',
         ],
     },
-    methods:{
-        addItem(){
-            this.toDo.push(this.newToDo);
+    methods: {
+        addToDo(){
+            this.items.push(this.newToDo);
             this.newToDo="";
         },
     },
