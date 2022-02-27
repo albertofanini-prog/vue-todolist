@@ -17,13 +17,16 @@
     </header>
     <main>
         <div id="app">
-            <input id="input" type="text" v-model="newToDo">
+            <input id="input" type="text" placeholder="Scrivi qui cosa aggiungere alla lista." v-model="newToDo">
             <button v-on:click="addToDo">
                 Add to ToDoList
             </button>
             <ul>
                 <li v-for="item in items">
-                    {{item}}
+                    {{item.text}}
+                    <button id="delete" v-on:click="deleteToDo(item)">
+                        delete it
+                    </button>
                 </li>
             </ul>
         </div>

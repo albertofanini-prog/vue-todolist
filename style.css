@@ -18,14 +18,14 @@ header h1{
 }
 
 input{
-    /*display: block;*/
+    display: block;
     margin-top: 40px;
     width: 500px;
     padding: 5px;
 }
 
 button{
-    /*display: block;*/
+    display: block;
     margin-top: 16px;
     padding: 5px;
 }
@@ -44,3 +44,10 @@ li{
     font-weight: 700;
 }
 
+.line-through{
+    text-decoration: line-through;
+}
+
+#delete{
+    width: 100px;
+}

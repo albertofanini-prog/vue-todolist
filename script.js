@@ -9,15 +9,44 @@ console.log('Hello Vue!');
 const app = new Vue ({
     el: '#app',
     data: {
+        newToDo: '',
         items:[
-            'mela',
-            'pera',
+            {
+                text: 'Welcome to Vue ToDoList!',
+                done: true,
+            },
+            {
+                text: 'This is a free ToDoList.',
+                done: true,
+            },
+            {
+                text: 'Made by a real web developer.',
+                done: false,
+            }
         ],
     },
     methods: {
-        addToDo(){
+        /*addToDo(){
             this.items.push(this.newToDo);
             this.newToDo="";
+        },*/
+        addToDo: function () {
+            if (this.NewToDo !== ''){
+                this.items.push({
+                    text: this.newToDo,
+                    done: true,
+                });
+            };
+            this.newToDo='';
+        // },
+        // doneToDo: function(){
+        //     if(this === true){
+        //         item.classList.add("line-through");
+        //     } return;
         },
+        deleteToDo: function(item){
+            //console.log(this.deleteToDo);
+            this.items.splice(item, 1);
+        }
     },
 })
