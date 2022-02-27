@@ -10,6 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
     <title>Vue ToDoList</title>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    <script src="https://kit.fontawesome.com/16e40d997b.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <header>
@@ -18,17 +19,23 @@
     <main>
         <div id="app">
             <input id="input" type="text" placeholder="Scrivi qui cosa aggiungere alla lista." v-model="newToDo">
-            <button v-on:click="addToDo">
+            <button id="add" v-on:click="addToDo">
                 Add to ToDoList
             </button>
-            <ul>
-                <li v-for="item in items">
+            <button id="remove" v-on:click="removeAll(items)">
+                Delete all
+            </button>
+            <ul  v-if="items.length > 0">
+                <li v-for="item in items" v-bind:class="{'done' : items.done}">
                     {{item.text}}
                     <button id="delete" v-on:click="deleteToDo(item)">
-                        delete it
+                        <i class="fa-solid fa-trash-can"></i>
                     </button>
                 </li>
             </ul>
+            <h3 v-else>
+                Al momento non hai impegni.
+            </h3>
         </div>
     </main>
     <footer>

@@ -11,7 +11,8 @@ const app = new Vue ({
     data: {
         newToDo: '',
         items:[
-            {
+            {   
+                id: 1,
                 text: 'Welcome to Vue ToDoList!',
                 done: true,
             },
@@ -24,6 +25,13 @@ const app = new Vue ({
                 done: false,
             }
         ],
+        number: function (){
+            if(this.items.length <= 3){
+                return this.items.length;
+            }   else{
+                return 'sono troppi!';
+            }
+        },
     },
     methods: {
         /*addToDo(){
@@ -34,10 +42,11 @@ const app = new Vue ({
             if (this.NewToDo !== ''){
                 this.items.push({
                     text: this.newToDo,
-                    done: true,
+                    done: false,
+                    id:'',
                 });
             };
-            this.newToDo='';
+            this.newToDo= {text:'', done: false}
         // },
         // doneToDo: function(){
         //     if(this === true){
@@ -47,6 +56,9 @@ const app = new Vue ({
         deleteToDo: function(item){
             //console.log(this.deleteToDo);
             this.items.splice(item, 1);
+        },
+        removeAll: function(items){
+            this.items.splice(items);
         }
     },
 })

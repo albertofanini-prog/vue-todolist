@@ -18,16 +18,57 @@ header h1{
 }
 
 input{
-    display: block;
+    display: inline-block;
     margin-top: 40px;
-    width: 500px;
-    padding: 5px;
+    width: 250px;
+    padding: 10px;
+    border-radius: 9999px;
+    border: none;
 }
 
-button{
+input[type=text]:focus{
+    width: 400px;
+    transition: ease-in-out, width 1s ease-in-out, ease-in, width 1s ease-in;
+    
+}
+/* button{
     display: block;
     margin-top: 16px;
     padding: 5px;
+} */
+
+#add{
+    display: inline-block;
+    margin-top: 16px;
+    padding: 7px;
+    background-color: #008F39;
+    color: white;
+    border: none;
+    border-radius: 15px;
+}
+
+#add:focus{
+    transition: ease-in-out, width 1s ease-in-out;
+
+}
+
+#remove{
+    display: inline-block;
+    margin-top: 16px;
+    padding: 7px;
+    background-color: #FF0000;
+    color: white;
+    border: none;
+    border-radius: 15px;
+}
+
+#delete{
+    padding: 7px;
+    background-color: #FF0000;
+    color: white;
+    border: none;
+    border-radius: 15px;
+    max-width: 30px;
 }
 
 ul{
@@ -42,12 +83,21 @@ li{
     padding: 10px;
     color: blue;
     font-weight: 700;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
 }
 
-.line-through{
+.done{
     text-decoration: line-through;
 }
 
 #delete{
     width: 100px;
+}
+
+h3{
+    margin-top: 15px;
+    margin-left: 5px;
+    font-size: 22px;
 }
