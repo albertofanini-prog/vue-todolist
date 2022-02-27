@@ -12,29 +12,46 @@
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
     <script src="https://kit.fontawesome.com/16e40d997b.js" crossorigin="anonymous"></script>
 </head>
-<body>
+<body id="body">
     <header>
         <h1>ToDoList</h1>
     </header>
     <main>
         <div id="app">
-            <input id="input" type="text" placeholder="Scrivi qui cosa aggiungere alla lista." v-model="newToDo">
-            <button id="add" v-on:click="addToDo">
-                Add to ToDoList
+            <input
+                id="input"
+                type="text"
+                placeholder="Write here."
+                v-model="newToDo"
+            >
+            <button
+                id="add"
+                v-on:click="addToDo"
+            >
+                {{add}}
             </button>
-            <button id="remove" v-on:click="removeAll(items)">
-                Delete all
+            <button
+                id="remove"
+                v-on:click="removeAll(items)"
+            >
+                {{removeEverything}}
             </button>
             <ul  v-if="items.length > 0">
-                <li v-for="item in items" v-bind:class="{'done' : items.done}">
+                <li
+                    v-for="item in items"
+                    v-bind:class="{'done' : items.done}"
+                >
                     {{item.text}}
-                    <button id="delete" v-on:click="deleteToDo(item)">
-                        <i class="fa-solid fa-trash-can"></i>
+                    <button
+                        id="delete"
+                        v-on:click="deleteToDo(item)"
+                    >
+                            <i class="fa-solid fa-trash-can"></i>
                     </button>
                 </li>
             </ul>
             <h3 v-else>
-                Al momento non hai impegni.
+                {{empty}}
             </h3>
         </div>
     </main>

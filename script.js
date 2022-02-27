@@ -9,6 +9,9 @@ console.log('Hello Vue!');
 const app = new Vue ({
     el: '#app',
     data: {
+        add: 'Add to ToDoList',
+        removeEverything: 'Remove all',
+        empty:'ToDoList is empty.',
         newToDo: '',
         items:[
             {   
