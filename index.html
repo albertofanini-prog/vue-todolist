@@ -37,6 +37,7 @@
                 {{removeEverything}}
             </button>
             <ul  v-if="items.length > 0">
+                <p>You have ({{items.length}}) ToDos</p>
                 <li
                     v-for="(item, index) in items"
                     v-bind:class="item.done ? 'done' : '' "
@@ -45,7 +46,7 @@
                     {{item.text}}
                     <button
                         id="delete"
-                        v-on:click="deleteToDo(item)"
+                        v-on:click.stop="deleteToDo(index)"
                     >
                         <i class="fa-solid fa-trash-can"></i>
                     </button>

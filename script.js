@@ -17,11 +17,11 @@ const app = new Vue ({
             {   
                 id: 1,
                 text: 'Welcome to Vue ToDoList!',
-                done: true,
+                done: false,
             },
             {
                 text: 'This is a free ToDoList.',
-                done: true,
+                done: false,
             },
             {
                 text: 'You can add your ToDo writing in the form and clicking the green button.',
@@ -75,6 +75,6 @@ const app = new Vue ({
         },
         removeAll: function(items){
             this.items.splice(items);
-        }
+        },
     },
 })

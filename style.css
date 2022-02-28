@@ -76,6 +76,13 @@ ul{
     margin-top: 20px;
 }
 
+ul p{
+    text-align: center;
+    padding: 10px;
+    font-size: 22px;
+    font-weight: 700;
+}
+
 li{
     list-style: none;
     margin: 12px 0px;
