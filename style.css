@@ -20,17 +20,18 @@ header h1{
 input{
     display: inline-block;
     margin-top: 40px;
-    width: 250px;
+    width: 450px;
     padding: 10px;
     border-radius: 9999px;
     border: none;
 }
 
 input[type=text]:focus{
-    width: 400px;
+    width: 650px;
     transition: ease-in-out, width 1s ease-in-out, ease-in, width 1s ease-in;
     
 }
+
 /* button{
     display: block;
     margin-top: 16px;

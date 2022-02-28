@@ -38,15 +38,16 @@
             </button>
             <ul  v-if="items.length > 0">
                 <li
-                    v-for="item in items"
-                    v-bind:class="{'done' : items.done}"
+                    v-for="(item, index) in items"
+                    v-bind:class="item.done ? 'done' : '' "
+                    @click="toggle(index)"
                 >
                     {{item.text}}
                     <button
                         id="delete"
                         v-on:click="deleteToDo(item)"
                     >
-                            <i class="fa-solid fa-trash-can"></i>
+                        <i class="fa-solid fa-trash-can"></i>
                     </button>
                 </li>
             </ul>

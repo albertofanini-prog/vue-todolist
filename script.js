@@ -24,9 +24,17 @@ const app = new Vue ({
                 done: true,
             },
             {
-                text: 'Made by a real web developer.',
+                text: 'You can add your ToDo writing in the form and clicking the green button.',
                 done: false,
-            }
+            },
+            {
+                text: 'You can remove your Todos clicking the red button.',
+                done: true,
+            },
+            {
+                text: 'You can remove your Todo clicking the button on the right.',
+                done: true,
+            },
         ],
         number: function (){
             if(this.items.length <= 3){
@@ -55,6 +63,11 @@ const app = new Vue ({
         //     if(this === true){
         //         item.classList.add("line-through");
         //     } return;
+        },
+        toggle: function (i){
+            const {done} = this.items[i];
+            //console.log(done);
+            this.items[i].done = !done; 
         },
         deleteToDo: function(item){
             //console.log(this.deleteToDo);
