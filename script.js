@@ -28,6 +28,10 @@ const app = new Vue ({
                 done: false,
             },
             {
+                text: 'You can check it clicking on the ToDo.',
+                done: false,
+            },
+            {
                 text: 'You can remove your Todos clicking the red button.',
                 done: true,
             },

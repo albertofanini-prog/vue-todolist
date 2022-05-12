@@ -12,24 +12,40 @@ body{
     align-items: center;
 }
 
+#body{
+    background-color: #352f5b;
+}
+
+.container{
+    max-width: 450px;
+}
+
 header h1{
     padding: 20px;
     font-size: 52px;
 }
 
+.input-group{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 input{
     display: inline-block;
     margin-top: 40px;
-    width: 450px;
+    height: 65px;
     padding: 10px;
     border-radius: 9999px;
     border: none;
 }
 
-input[type=text]:focus{
-    width: 650px;
-    transition: ease-in-out, width 1s ease-in-out, ease-in, width 1s ease-in;
-    
+input[type=text], input[type=text]:focus{
+    /* width: 650px;
+    transition: ease-in-out, width 1s ease-in-out, ease-in, width 1s ease-in; */
+    color: #fff;
+    border: none;
+    background-color: rgba(0, 0, 0, .2);
 }
 
 /* button{
@@ -38,14 +54,22 @@ input[type=text]:focus{
     padding: 5px;
 } */
 
+.input-group-append{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 65px;
+}
+
 #add{
     display: inline-block;
-    margin-top: 16px;
-    padding: 7px;
     background-color: #008F39;
     color: white;
     border: none;
-    border-radius: 15px;
+    height: 50%;
+    font-size: 14px;
 }
 
 #add:focus{
@@ -55,12 +79,11 @@ input[type=text]:focus{
 
 #remove{
     display: inline-block;
-    margin-top: 16px;
-    padding: 7px;
     background-color: #FF0000;
     color: white;
+    height: 50%;
     border: none;
-    border-radius: 15px;
+    font-size: 14px;
 }
 
 #delete{
@@ -74,6 +97,8 @@ input[type=text]:focus{
 
 ul{
     margin-top: 20px;
+    padding-left: 0;
+    width: 100%;
 }
 
 ul p{
@@ -81,6 +106,7 @@ ul p{
     padding: 10px;
     font-size: 22px;
     font-weight: 700;
+    color: white;
 }
 
 li{
@@ -89,11 +115,11 @@ li{
     border: 1px solid grey;
     border-radius: 35px;
     padding: 10px;
-    color: blue;
-    font-weight: 700;
     display: flex;
     justify-content: space-between;
     align-items: baseline;
+    background-color: #423a6f;
+    color: #F8F9FA;
 }
 
 .done{
