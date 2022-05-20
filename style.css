@@ -144,9 +144,14 @@ li{
     width: 100px;
 }
 
-h3{
+/* h3{
     color: white;
     padding-top: 75px;
     margin-left: 41%;
     font-size: 22px;
+} */
+
+.empty h3{
+    font-size: 26px;
+    padding-top: 10px;
 }

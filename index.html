@@ -62,14 +62,13 @@
                     </li>
                     <p>You have ({{items.length}}) ToDos</p>
                 </ul>
-                <h3 class="margin-left: 800px;" v-else>
-                    {{empty}}
-                </h3>
+                <div class="text-center text-light empty" v-else>
+                    <h3>
+                        {{empty}}
+                    </h3>
+                </div>
             </div>
         </main>
-        <footer>
-    
-        </footer>
     </div>
     <script src="script.js"></script>
 </body>
