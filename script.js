@@ -32,21 +32,14 @@ const app = new Vue ({
                 done: false,
             },
             {
-                text: 'You can remove your Todos clicking the red button.',
+                text: 'You can remove your ToDos clicking the red button.',
                 done: true,
             },
             {
-                text: 'You can remove your Todo clicking the red button on right.',
+                text: 'You can remove your ToDo clicking the red button on right.',
                 done: true,
             },
         ],
-        number: function (){
-            if(this.items.length <= 3){
-                return this.items.length;
-            }   else{
-                return 'sono troppi!';
-            }
-        },
     },
     methods: {
         addToDo: function () {
@@ -54,20 +47,18 @@ const app = new Vue ({
                 this.items.push({
                     text: this.newToDo,
                     done: false,
-                    // id:'',
                 });
-            } else{
-                alert('Deevi scrivere un ToDo.')
             }
-            this.newToDo= ''//{text:'', done: false}
+            
+            this.newToDo= ''
         },
         toggle: function (i){
             const {done} = this.items[i];
-            //console.log(done);
+            // console.log(done);
             this.items[i].done = !done; 
         },
         deleteToDo: function(item){
-            //console.log(this.deleteToDo);
+            // console.log(this.deleteToDo);
             this.items.splice(item, 1);
         },
         removeAll: function(items){
