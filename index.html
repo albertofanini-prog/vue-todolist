@@ -46,7 +46,7 @@
 
                     </div>
                 </div>
-                <ul  v-if="items.length > 0">
+                <ul class="px-0" v-if="items.length > 0">
                     <li
                         v-for="(item, index) in items"
                         v-bind:class="item.done ? 'done' : '' "
@@ -62,7 +62,7 @@
                     </li>
                     <p>You have ({{items.length}}) ToDos</p>
                 </ul>
-                <h3 v-else>
+                <h3 class="margin-left: 800px;" v-else>
                     {{empty}}
                 </h3>
             </div>
@@ -70,7 +70,6 @@
         <footer>
     
         </footer>
-
     </div>
     <script src="script.js"></script>
 </body>
